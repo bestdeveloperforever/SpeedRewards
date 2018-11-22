@@ -91,6 +91,21 @@ if(!toSend) return message.reply("** :x: |اسف لم اجد شخص بهاد ا�
  }
 });
 
+let BC = new Discord.RichEmbed()
+    .setColor("ORANGE")
+    .addField("**•BC Messages**","**"+anarg+"**")
+if(command === `-BC`) {
+    if(!message.channel.guild) return
+ if (message.author.id !== '459875496344158209') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if(!message.author.id === '459875496344158209') return;
+    let toSend = message.mentions.users.first();
+if(!toSend) return message.reply("** :x: |اسف لم اجد شخص بهاد الاسم| :x:** ")
+    if(toSend.bot) return message.reply("**:x: | لا أستطيع ارسال رسالة لبوت| :x:**");
+    if(anarg < 1) return message.reply("**-_-** ");
+    toSend.send({embed:BC});
+    message.reply("**|✅| تم**")
+ }
+});
 
 client.on("message", message => {
 
