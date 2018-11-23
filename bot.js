@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
 const adminprefix = "-";
-const developers = ["462647886035812372"]
+const developers = ["509689390528987158"]
 const prefix = "-";
 client.on('ready', () => {
   console.log('╔[════════════════════════════════════]╗');
@@ -80,8 +80,8 @@ let DM = new Discord.RichEmbed()
     .addField("**•DM Messages**","**"+anarg+"**")
 if(command === `-DM`) {
     if(!message.channel.guild) return
- if (message.author.id !== '459875496344158209') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
- if(!message.author.id === '459875496344158209') return;
+ if (message.author.id !== '509689390528987158') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if(!message.author.id === '509689390528987158') return;
     let toSend = message.mentions.users.first();
 if(!toSend) return message.reply("** :x: |اسف لم اجد شخص بهاد الاسم| :x:** ")
     if(toSend.bot) return message.reply("**:x: | لا أستطيع ارسال رسالة لبوت| :x:**");
