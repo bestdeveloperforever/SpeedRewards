@@ -80,8 +80,8 @@ let DM = new Discord.RichEmbed()
     .addField("**•DM Messages**","**"+anarg+"**")
 if(command === `-DM`) {
     if(!message.channel.guild) return
- if (message.author.id !== '509689390528987158') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
- if(!message.author.id === '509689390528987158') return;
+    if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply('** You Dont Have Permission To Do This :) **')
+    if (!message.member.hasPermission('ADMINISTRATOR')) return;
     let toSend = message.mentions.users.first();
 if(!toSend) return message.reply("** :x: |اسف لم اجد شخص بهاد الاسم| :x:** ")
     if(toSend.bot) return message.reply("**:x: | لا أستطيع ارسال رسالة لبوت| :x:**");
